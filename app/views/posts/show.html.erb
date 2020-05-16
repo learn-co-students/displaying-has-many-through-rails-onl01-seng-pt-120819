@@ -7,3 +7,9 @@ Comments:
     <%= link_to comment.user.username, user_path(comment.user) %> said
     <%= comment.content %>
   <% end %>
+
+  <h2><%= @user.username %> </h2> has commented on the following posts:
+
+<% @user.posts.each do |post| %>
+  <%= link_to post.title, post_path(post) %>
+<% end %>
