@@ -1,5 +1,7 @@
-<h2><%= @user.username %> </h2> has commented on the following posts:
+<h1><%= @user.username %> comments:</h1>
 
-<% @user.posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
+<% @user.posts.each do |post|%>
+  <p>
+    <%= link_to post.title, post_path(post) %>
+  </p>
 <% end %>
